@@ -1,0 +1,1 @@
+Predict crime locations and rates one week in advance by implementing Poisson Process to data set of crimes in Chicago in past 367 weeks.Implement Kernel Smoothing to estimate a Poisson rate function a week in advance. Generate heatmap on Google Maps to demonstrate forecasting of crimes locations and rate.
