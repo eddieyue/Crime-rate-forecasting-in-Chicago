@@ -29,7 +29,7 @@ str)
 Kernel selection
 ================
 
-I implement kernel smoothing to estimate a Poisson rate function parameter in next week and make the prediction. To apply kernel smiithing, I experiment different tuning parameters in Gaussian, Epanechinikov and Boxcar kernel. Then I select those those produce the highest log-likelihood on held-out data.
+I implement kernel smoothing to estimate a Poisson rate function parameter in next week. To apply kernel smiithing, I experiment different tuning parameters in Gaussian, Epanechinikov and Boxcar kernel. Then I select those produce the highest log-likelihood on held-out data.
 
 Prediction of next week crime rates
 ===================================
