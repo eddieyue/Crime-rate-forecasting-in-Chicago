@@ -14,7 +14,7 @@ The following bit of simple code to show how to extract and display them.
 from DAL import create
 #create a handle to the crime dataset 
 crime=create("crime")
-#creates the Crime DAL.
+#loading crime dataset
 crime.get_crime_list()->dict(key:int,value:string)
 #gets the list of crime types.
 crime.get_crime_counts()->dict(key:(int,int),value:[int])
