@@ -12,18 +12,21 @@ The following bit of simple code to show how to extract and display them.
 
 ```python
 from DAL import create
-#create a handle to the crime dataset 
+
+# Create a handle to the crime dataset 
 crime=create("crime")
-#loading crime dataset
-crime.get_crime_list()->dict(key:int,value:string)
-#gets the list of crime types.
-crime.get_crime_counts()->dict(key:(int,int),value:[int])
-#gets the number of crimes in each region. The first tuple value is the region and the second tuple value is the crime type.
-crime.get_region_list()->dict(key:int,value:(float,float))
-#gets the list of regions.
-crime.iter()-> iterable(tuple(when:datetime.datetime,lat:float,lon:float,type:
-str)
-#iterates over all crimes in the dataset.
+
+# Gets the list of crime types.
+crime.get_crime_list()
+
+# Gets the dictionary of number of crimes in each region. The first tuple value in key is the region, the second tuple value in key is the crime type and the value is the number of crimes.
+crime.get_crime_counts()
+
+# Gets the dictionary of regions with it's latitude and longitude.
+crime.get_region_list()
+
+# Iterates over all crimes in the dataset with the data time , latitude, longitude and type of crimes.
+crime.iter()
 ```
 
 Kernel selection
