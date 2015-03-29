@@ -38,3 +38,7 @@ Prediction of next week crime rates
 ===================================
 
 For each of type of crime, I save my predicted rate for next week in a file, named as [crime-type].txt at all the regions in Chicago.
+
+Please check the notebook here for detail:
+
+http://nbviewer.ipython.org/github/eddieyue/Prediction-of-crimes--location-and-rate--at-Chicago/blob/master/Forecasting%20of%20Crimes%27%20location%20and%20rate%20at%20Chicago%20.ipynb
