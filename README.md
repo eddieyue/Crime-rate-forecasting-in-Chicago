@@ -37,7 +37,7 @@ I implement kernel smoothing to estimate a Poisson rate function parameter in ne
 Prediction of next week crime rates
 ===================================
 
-For each of type of crime, I save my predicted rate for next week in a file, named as [crime-type].txt at all the regions in Chicago.
+For each of type of crime, I save my predicted rate for next week in a file, named as [crime-type].txt at all the regions in Chicago. With the predicted crimes rate in all regions and their geographical information, it is easy to generate heat maps by heatmap.py, https://github.com/jjguy/heatmap.
 
 Please check the notebook here for detail:
 
