@@ -3,12 +3,11 @@ Crime Data
 
 I use the Crime data from Data Access Layer(DAL) https://github.com/cioc/DAL, which is a library that makes it easy to use the datasets. 
 
-For this project, I work with the Chicago Crime dataset. The area of Chicago is partitioned into N = 2,985 square regions, with centers in the form of key-value pairs of latitude and longitude. And I will build up models and forecast for ten different crime types at Chicago:
+For this project, I work with the Chicago Crime dataset. The area of Chicago is partitioned into N = 2,985 square regions, with centers in the form of key-value pairs of latitude and longitude. And I will build up models and forecast for the following ten different crime types:
 
-ASSAULT, BATTERY,BURGLARY, CRIMINAL DAMAGE, DECEPTIVE PRACTICE,
-MOTOR VEHICLE THEFT, NARCOTICS, OTHER OFFENSE, ROBBERY, THEFT 
+assault, battery, burglary, crimial damage, deceptive practice, motor vehicle theft, narotics, other offense, robbery, theft 
 
-The following bit of simple code to show how to extract and display them.
+The following bit of Python code shows how to extract and display them:
 
 ```python
 from DAL import create
@@ -32,13 +31,13 @@ crime.iter()
 Kernel selection
 ================
 
-I implement kernel smoothing to estimate a Poisson rate function parameter in next week. To apply kernel smiithing, I experiment different tuning parameters in Gaussian, Epanechinikov and Boxcar kernel. Then I select those produce the highest log-likelihood on held-out data.
+I implement kernel smoothing to estimate a Poisson rate function parameter. To apply kernel smoothing, I experiment with different tuning parameters in Gaussian, Epanechinikov and Boxcar kernel. Then I select those producing the highest log-likelihood on held-out data.
 
-Prediction of next week crime rates
-===================================
+Prediction of crime rates one week in advance
+=============================================
 
-For each of type of crime, I save my predicted rate for next week in a file, named as [crime-type].txt at all the regions in Chicago. With the predicted crimes rate in all regions and their geographical information, I should have generated heatmaps by heatmap.py, https://github.com/jjguy/heatmap. However, due to the AWS and geographical data dependency, the heatmaps are missing. I will fix it as soon as I get the permission to access the data.
+For each of type of crime, I save my predicted rate for next week in a file, named as [crime-type].txt. With the predicted crimes rate in all regions and their geographical information, I could have generated heatmaps by heatmap.py, https://github.com/jjguy/heatmap. However, due to the AWS and geographical data dependency, the heatmaps are missing. I will fix it as soon as I get the permission to access the data.
 
 Please check the notebook here for detail:
 
-http://nbviewer.ipython.org/github/eddieyue/Prediction-of-crimes--location-and-rate--at-Chicago/blob/master/Forecasting%20of%20Crimes%27%20location%20and%20rate%20at%20Chicago%20.ipynb
+http://nbviewer.ipython.org/github/eddieyue/Crime-rate-forecasting-in-Chicago/blob/master/Forecasting%20of%20Crimes%27%20location%20and%20rate%20in%20Chicago%20.ipynb
